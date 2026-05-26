@@ -21,14 +21,18 @@ https://github.com/user-attachments/assets/ef57333e-f879-432a-afb9-180388982478
 
 ## Installation
 
-### Via Claude Code Plugin Marketplace (Recommended)
+### Via Claude Code Custom Marketplace Source (Recommended)
 
-Install directly from Claude Code:
+Install directly from this public GitHub repo:
 
-```bash
-/plugin marketplace add zarazhangrui/frontend-slides
+```text
+/plugin marketplace add https://github.com/zarazhangrui/frontend-slides
 /plugin install frontend-slides@frontend-slides
 ```
+
+Use the HTTPS URL. The shorter `zarazhangrui/frontend-slides` form may make Claude Code try SSH, which can fail if GitHub is not already in your `known_hosts` file.
+
+This does not require the repo to be approved in the official Claude Code marketplace. Official marketplace listing is separate and still depends on Claude Code's review process.
 
 Then use it by typing `/frontend-slides:frontend-slides` in Claude Code. Claude Code namespaces plugin-installed skills as `/plugin-name:skill-name`.
 
@@ -65,7 +69,7 @@ Agents such as Codex, Kimi Code, OpenCode, Gemini CLI, or other local coding ass
 - `bold-template-pack/`
 - `scripts/`
 
-The Claude Code plugin gives Claude Code a marketplace install flow and `/frontend-slides:frontend-slides` command. Other agents usually do not use that command surface; they should follow `SKILL.md` directly inside a workspace.
+The Claude Code plugin gives Claude Code a custom marketplace-source install flow and `/frontend-slides:frontend-slides` command. Other agents usually do not use that command surface; they should follow `SKILL.md` directly inside a workspace.
 
 ## Usage
 
@@ -555,7 +559,7 @@ Uses [Playwright](https://playwright.dev) to screenshot each slide at 1920×1080
 ## Requirements
 
 - A local coding agent with filesystem access and the ability to run shell commands
-- Claude Code is required only for the marketplace plugin install and `/frontend-slides:frontend-slides` command
+- Claude Code is required only for the custom marketplace-source install and `/frontend-slides:frontend-slides` command
 - For PPT conversion: Python with `python-pptx` library
 - For URL deployment: Node.js + Vercel account (free)
 - For PDF export: Node.js (Playwright installs automatically)
