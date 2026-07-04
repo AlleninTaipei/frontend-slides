@@ -18,7 +18,7 @@ New here? This beginner-friendly video walks you through the whole thing, start 
 
 Here is a deck about the skill, made through the skill:
 
-https://github.com/user-attachments/assets/ef57333e-f879-432a-afb9-180388982478
+<https://github.com/user-attachments/assets/ef57333e-f879-432a-afb9-180388982478>
 
 ### Key Features
 
@@ -576,6 +576,34 @@ bash scripts/export-pdf.sh ./presentation.html ./output.pdf
 ```
 
 Uses [Playwright](https://playwright.dev) to screenshot each slide at 1920×1080 and combine into a PDF. Installs automatically if needed. Animations are not preserved (it's a static snapshot).
+
+## Q&A
+
+### 這個 skill 可以產生幾種不同風格的 slides ?
+
+風格來源分三層, 加總可產出的具體選項相當多.
+
+第一層是 STYLE_PRESETS.md 收錄的 12 種精選風格, 分暗色, 亮色, 特殊三類, 見上方 Included Styles 章節.
+
+第二層是 bold-template-pack 中的 34 個進階模板, 見上方 Bold Template Gallery 章節, 每個模板都有獨立的 design.md 設計系統文件.
+
+第三層是 Phase 2 依使用者的場合, 對象, 情緒即興生成的 wildcard 客製風格, 不受限於上述清單.
+
+實際產生簡報時, 這個 skill 會從 12 個精選風格中挑 1 個, 從 34 個進階模板中挑至少 1 個, 再加 1 個 wildcard, 一次展示 3 種風格預覽讓使用者用眼睛比較挑選, 而不是只用文字描述.
+
+`frontend-slides-deck.html`, 一份用 frontend-slides 做出來的 deck, 介紹這個專案本身.
+
+### frontend-design, 這個是什麼? 怎麼使用?
+
+`/frontend-design:frontend-design` 是 Claude Code 官方的外掛技能 (plugin skill), 這個技能要求先針對這次的主題, 量身打造調色盤, 字體搭配, 版面邏輯, 而不是套用通用樣板.
+
+使用方式是 `/frontend-design:frontend-design [你的設計需求或檔案]`. 例如 `@README.md`, 意思是把這份 README 當作設計簡報, 根據裡面描述的專案內容, 去發想一個網頁的視覺設計方向.
+
+實際運作分兩階段. 第一階段是先做設計提案, 不寫程式, 內容包含調色盤 (4 到 6 個具名色號), 字體搭配 (至少兩種角色: 展示用襯線或個性字, 內文用字), 版面概念 (用 ASCII 線框圖比較幾種佈局), 以及一個簽名元素, 也就是整頁最讓人記住的獨特設計亮點. 第二階段是提案自我審查, 檢查是否落入上面提到的樣板慣性, 如果有就修改, 並說明改了什麼跟為什麼, 通過審查後才真正動手寫 HTML/CSS.
+
+跟 frontend-slides 的差別在於, frontend-slides 是專門做投影片 (16:9 固定舞台, 多張 slide 翻頁) 的技能, 而 frontend-design 是通用的網頁 UI 設計指引, 沒有限定投影片格式, 可以用在任何前端頁面 (首頁, 文件頁, 元件等等).
+
+`frontend-slides-deck.html`, 一份用 frontend-slides 做出來的 deck, 介紹這個專案本身.
 
 ## Requirements
 
