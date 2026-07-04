@@ -804,6 +804,16 @@ bash scripts/export-pdf.sh ./presentation.html ./output.pdf</div>
         <p>第二層是 bold-template-pack 中的 34 個進階模板, 見上方 Bold Template Gallery 章節, 每個模板都有獨立的 design.md 設計系統文件.</p>
         <p>第三層是 Phase 2 依使用者的場合, 對象, 情緒即興生成的 wildcard 客製風格, 不受限於上述清單.</p>
         <p>實際產生簡報時, 這個 skill 會從 12 個精選風格中挑 1 個, 從 34 個進階模板中挑至少 1 個, 再加 1 個 wildcard, 一次展示 3 種風格預覽讓使用者用眼睛比較挑選, 而不是只用文字描述.</p>
+        <p><code>frontend-slides-deck.html</code>, 一份用 frontend-slides 做出來的 html, 介紹這個專案本身.</p>
+      </div>
+
+      <div class="panel reveal qa-block" lang="zh-Hant">
+        <h2>frontend-design, 這個是什麼? 怎麼使用?</h2>
+        <p><code>/frontend-design:frontend-design</code> 是 Claude Code 官方的外掛技能 (plugin skill), 這個技能要求先針對這次的主題, 量身打造調色盤, 字體搭配, 版面邏輯, 而不是套用通用樣板.</p>
+        <p>使用方式是 <code>/frontend-design:frontend-design [你的設計需求或檔案]</code>. 例如 <code>@README.md</code>, 意思是把這份 README 當作設計簡報, 根據裡面描述的專案內容, 去發想一個網頁的視覺設計方向.</p>
+        <p>實際運作分兩階段. 第一階段是先做設計提案, 不寫程式, 內容包含調色盤 (4 到 6 個具名色號), 字體搭配 (至少兩種角色: 展示用襯線或個性字, 內文用字), 版面概念 (用 ASCII 線框圖比較幾種佈局), 以及一個簽名元素, 也就是整頁最讓人記住的獨特設計亮點. 第二階段是提案自我審查, 檢查是否落入上面提到的樣板慣性, 如果有就修改, 並說明改了什麼跟為什麼, 通過審查後才真正動手寫 HTML/CSS.</p>
+        <p>跟 frontend-slides 的差別在於, frontend-slides 是專門做投影片 (16:9 固定舞台, 多張 slide 翻頁) 的技能, 而 frontend-design 是通用的網頁 UI 設計指引, 沒有限定投影片格式, 可以用在任何前端頁面 (首頁, 文件頁, 元件等等).</p>
+        <p><code>frontend-slides-docs.html</code>, 一份用 frontend-design 做出來的 html, 介紹這個專案本身.</p>
       </div>
     </div>
   </section>
