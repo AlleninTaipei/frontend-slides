@@ -591,7 +591,7 @@ Uses [Playwright](https://playwright.dev) to screenshot each slide at 1920×1080
 
 實際產生簡報時, 這個 skill 會從 12 個精選風格中挑 1 個, 從 34 個進階模板中挑至少 1 個, 再加 1 個 wildcard, 一次展示 3 種風格預覽讓使用者用眼睛比較挑選, 而不是只用文字描述.
 
-`frontend-slides-deck.html`, 一份用 frontend-slides 做出來的 deck, 介紹這個專案本身.
+`frontend-slides-deck.html`, 一份用 frontend-slides 做出來的 html, 介紹這個專案本身.
 
 ### frontend-design, 這個是什麼? 怎麼使用?
 
@@ -603,7 +603,7 @@ Uses [Playwright](https://playwright.dev) to screenshot each slide at 1920×1080
 
 跟 frontend-slides 的差別在於, frontend-slides 是專門做投影片 (16:9 固定舞台, 多張 slide 翻頁) 的技能, 而 frontend-design 是通用的網頁 UI 設計指引, 沒有限定投影片格式, 可以用在任何前端頁面 (首頁, 文件頁, 元件等等).
 
-`frontend-slides-deck.html`, 一份用 frontend-slides 做出來的 deck, 介紹這個專案本身.
+`frontend-slides-docs.html`, 一份用 frontend-design 做出來的 html, 介紹這個專案本身.
 
 ## Requirements
 
